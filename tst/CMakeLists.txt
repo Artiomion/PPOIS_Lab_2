@@ -1,0 +1,27 @@
+set(BINARY ${CMAKE_PROJECT_NAME}_tst)
+
+file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
+
+set(SOURCES ${TEST_SOURCES})
+
+add_executable(${BINARY} ${TEST_SOURCES}
+        ArtworkTest.cpp
+        CuratorTest.cpp
+        DigitalArtworkTest.cpp
+        EntityTest.cpp
+        ExhibitionTest.cpp
+        GalleryTest.cpp
+        GalleryEventTest.cpp
+        MaintenanceStaffTest.cpp
+        ManagerTest.cpp
+        PhysicalArtworkTest.cpp
+        RoomTest.cpp
+        SecurityTest.cpp
+        TicketTest.cpp
+        VisitorTest.cpp
+)
+
+add_test(NAME ${BINARY} COMMAND ${BINARY})
+message(STATUS "Test sources: ${TEST_SOURCES}")
+
+target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
