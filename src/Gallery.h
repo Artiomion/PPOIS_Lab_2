@@ -8,14 +8,17 @@
 #include <vector>
 #include "Entity.h"
 #include "Room.h"
+#include "Exhibition.h"
 
 class Gallery : public Entity {
 private:
     std::string address;
     std::vector<Room> rooms;
+    std::vector<Exhibition> exhibitions; //-------------------
 public:
     Gallery(int id, std::string name, std::string address);
     void AddRoom(const Room& room);
+    void AddExhibition(const Exhibition& exhibition);
     void ShowExhibition() const;
 };
 

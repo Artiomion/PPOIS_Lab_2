@@ -13,7 +13,7 @@ private:
     std::string exhibitionName;
     std::string startDate;
     std::string endDate;
-    std::vector<Artwork> artworks;
+    std::vector<Artwork> artworks; //-------------------
 public:
     Exhibition(std::string name, std::string start, std::string end);
     void AddArtwork(const Artwork& artwork);

@@ -7,7 +7,7 @@
 
 #include "Artwork.h"
 
-class DigitalArtwork : virtual public Artwork {
+class DigitalArtwork : virtual public Artwork { //-------------------
 private:
     std::string fileFormat;
     float fileSize;

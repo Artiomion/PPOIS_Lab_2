@@ -14,3 +14,7 @@ void Curator::OrganizeExhibition() {
 void Curator::DisplayInfo() const {
     std::cout << "Куратор: " << name << ", Отдел: " << department << std::endl;
 }
+
+void Curator::AddExhibition(const Exhibition& exhibition) {
+    exhibitions.push_back(exhibition); //-------------------
+}

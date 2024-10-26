@@ -30,6 +30,11 @@ int main() {
     room2.ShowArtwork(physicalArt);
 
     Exhibition exhibition("Экспо Современного Искусства", "2024-10-01", "2024-10-15");
+    Exhibition exhibition2("Классическое Искусство", "2024-11-01", "2024-11-15");
+
+    gallery.AddExhibition(exhibition);
+    gallery.AddExhibition(exhibition2);
+
     exhibition.AddArtwork(digitalArt);
     exhibition.AddArtwork(physicalArt);
     exhibition.DisplayExhibition();
@@ -44,10 +49,13 @@ int main() {
     visitor.DisplayInfo();
 
     Curator curator(6, "Валера", 45, "T987654", "2024-10-15", "Современное искусство", 20);
+    curator.AddExhibition(exhibition);
     curator.DisplayInfo();
     curator.OrganizeExhibition();
 
     Ticket ticket("T001", "Артем Сотников", 15.0, "Экспо Современного Искусства");
+    visitor.AddTicket(ticket);
+    visitor.DisplayInfo();
     ticket.GetPrice();
 
     Manager manager("Пётр", "Современное искусство", "123-456-789");

@@ -8,7 +8,7 @@ Exhibition::Exhibition(std::string name, std::string start, std::string end)
         : exhibitionName(name), startDate(start), endDate(end) {}
 
 void Exhibition::AddArtwork(const Artwork& artwork) {
-    artworks.push_back(artwork);
+    artworks.push_back(artwork); //-------------------
 }
 
 void Exhibition::DisplayExhibition() const {

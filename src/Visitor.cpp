@@ -11,3 +11,7 @@ void Visitor::DisplayInfo() const {
     std::cout << "Посетитель: " << name << ", Возраст: " << age
               << ", Номер билета: " << ticketNumber << ", Дата посещения: " << visitDate << std::endl;
 }
+
+void Visitor::AddTicket(const Ticket& ticket) {
+    tickets.push_back(ticket); //-------------------
+}

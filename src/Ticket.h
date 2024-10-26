@@ -10,7 +10,7 @@
 class Ticket {
 private:
     std::string ticketNumber;
-    std::string visitorName;
+    std::string visitorName; //-------------------
     double price;
     std::string eventTitle;
 public:
